@@ -4,7 +4,7 @@ Initial flowchart of this project.
 ```mermaid
 flowchart TD
     subgraph Kubernetes_Cluster [MicroK8s Cluster]
-        User((Besökare)) -->|HTTP| Nginx[Nginx / PHP-FPM]
+        User((Visitor)) -->|HTTP| Nginx[Nginx / PHP-FPM]
         Nginx -->|registrating a visitor| DB[(MySQL Database)]
         
         Watcher[Go Watcher App] -->|asking for 'count'| DB
