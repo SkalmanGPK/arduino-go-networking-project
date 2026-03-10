@@ -5,15 +5,15 @@ Initial flowchart of this project.
 flowchart TD
     subgraph Kubernetes_Cluster [MicroK8s Cluster]
         User((Besökare)) -->|HTTP| Nginx[Nginx / PHP-FPM]
-        Nginx -->|Registrerar besök| DB[(MySQL Database)]
+        Nginx -->|registrating a visitor| DB[(MySQL Database)]
         
-        Watcher[Go Watcher App] -->|Frågar efter 'count'| DB
+        Watcher[Go Watcher App] -->|asking for 'count'| DB
     end
 
-    Watcher -->|UDP Paket| Router{Hemrouter / Gateway}
+    Watcher -->|UDP Paket| Router{Homerouter / Gateway}
     
     subgraph Hardware [Physical Hardware]
-        Router -->|Lokal IP| Arduino[Arduino Uno R4 Wi-Fi]
+        Router -->|Local IP| Arduino[Arduino Uno R4 Wi-Fi]
         Arduino -->|Bitshifting| Matrix[12x8 LED Matrix]
     end
 
