@@ -1,6 +1,7 @@
 # arduino-go-networking-project
 How to communicate between Go-lang, php, and arduino R4 uno Wi-Fi, over kubernetes / docker containers and with an UDP connection between Go-lang and the arduino.
 Initial flowchart of this project.
+```
 flowchart TD
     subgraph Kubernetes_Cluster [MicroK8s Cluster]
         User((Besökare)) -->|HTTP| Nginx[Nginx / PHP-FPM]
@@ -20,4 +21,4 @@ flowchart TD
     style Watcher fill:#00ADD8,stroke:#333,stroke-width:2px,color:#fff
     style Arduino fill:#00979D,stroke:#333,stroke-width:2px,color:#fff
     style DB fill:#f9f,stroke:#333,stroke-width:2px
-  
+  ```
